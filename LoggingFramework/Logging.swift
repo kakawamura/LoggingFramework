@@ -8,10 +8,6 @@
 
 import Foundation
 
-//public func Log(string: String) {
-//    print("[\(NSDate())] \(string)"
-//}
-//
 public class Logging {
     public init() {
         print("init")
