@@ -10,6 +10,7 @@
 		4924FBC91C9E87D6003DDF75 /* LoggingFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 4924FBC81C9E87D6003DDF75 /* LoggingFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4924FBD01C9E87D6003DDF75 /* LoggingFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4924FBC51C9E87D6003DDF75 /* LoggingFramework.framework */; };
 		4924FBD51C9E87D6003DDF75 /* LoggingFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4924FBD41C9E87D6003DDF75 /* LoggingFrameworkTests.swift */; };
+		4924FBE01C9E87E8003DDF75 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4924FBDF1C9E87E8003DDF75 /* Logging.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		4924FBCF1C9E87D6003DDF75 /* LoggingFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoggingFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4924FBD41C9E87D6003DDF75 /* LoggingFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingFrameworkTests.swift; sourceTree = "<group>"; };
 		4924FBD61C9E87D6003DDF75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4924FBDF1C9E87E8003DDF75 /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				4924FBC81C9E87D6003DDF75 /* LoggingFramework.h */,
+				4924FBDF1C9E87E8003DDF75 /* Logging.swift */,
 				4924FBCA1C9E87D6003DDF75 /* Info.plist */,
 			);
 			path = LoggingFramework;
@@ -196,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4924FBE01C9E87E8003DDF75 /* Logging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +314,7 @@
 		4924FBDA1C9E87D6003DDF75 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -320,12 +325,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github-kakawamura.LoggingFramework";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		4924FBDB1C9E87D6003DDF75 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
